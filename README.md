@@ -14,3 +14,8 @@ Download RSA public keys modulus from the https://ct.googleapis.com/logs/argon20
 ```sh
 ./axeman.py -v -u https://ct.googleapis.com/logs/argon2023 -o output_dir -f axeman_argon2023_log -c 5
 ```
+
+## Notes
+
+- A lot of duplicate modulus will be downloaded, especially from the "extra_data" part of CT log entries. These can be de-duped later.
+- The output is not storage-efficient, as its size could be reduced by a lot.
